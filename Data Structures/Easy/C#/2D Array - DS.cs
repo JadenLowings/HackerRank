@@ -1,9 +1,9 @@
-public int hourglassSum(List<List<int>> arr)
+public static int hourglassSum(List<List<int>> arr)
 {
     var sum = int.MinValue;
-    for (var i = 0; i < arr.Count - 2; i++) 
+    for (var i = 0; i < arr.Count - 2; i++)
     {
-        for (var x = 0; x < arr[i].Count - 2; x++) 
+        for (var x = 0; x < arr[i].Count - 2; x++)
         {
             var rowOne = arr[i][x] + arr[i][x + 1] + arr[i][x + 2];
             var rowTwo = arr[i + 1][x + 1];
