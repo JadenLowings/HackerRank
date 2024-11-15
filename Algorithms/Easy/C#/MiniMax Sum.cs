@@ -1,10 +1,13 @@
 public static void miniMaxSum(List<int> arr)
 {
     //LINQ
-    // arr.Sort();
-    // var min = arr.Where(x => x != arr.Last()).Sum();
-    // var max = arr.Where(x => x != arr.First()).Sum();
-    // Console.WriteLine(min + " " + max);
+    // long totalSum = arr.Select(x => (long)x).Sum();
+    // var min = arr.Min();
+    // var max = arr.Max();
+
+    // var minSum = totalSum - max;
+    // var maxSum = totalSum - min; 
+    // Console.WriteLine($"{minSum} {maxSum}");
 
     var min = int.MaxValue;
     var max = int.MinValue;
@@ -14,8 +17,8 @@ public static void miniMaxSum(List<int> arr)
     {
         sum += arr[i];
         if (arr[i] < min) min = arr[i];
-        else if (arr[i] > max) max = arr[i];
+        if (arr[i] > max) max = arr[i];
 
     }
-    Console.WriteLine((sum - max) + " " + (sum - min));
+    Console.WriteLine($"{sum - max} {sum - min}");
 }
