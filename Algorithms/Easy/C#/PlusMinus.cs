@@ -20,3 +20,8 @@ public static void plusMinus(List<int> arr)
     writeMe(neg, count);
     writeMe(zero, count);
 }
+
+public static void writeMe(double input, int count)
+{
+    Console.WriteLine((input / count).ToString("F6"));
+}
